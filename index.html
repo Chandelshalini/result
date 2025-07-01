@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Check Your Result</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+  <div class="start-screen animate__animated animate__fadeIn">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Cute Animal" class="animal-img" />
+    <h1 class="animated-title">🐾 Welcome to <br>The New Era School Of Sciences, Chhatri 🐾</h1>
+    <p class="subtext">Click the button below to view your result</p>
+    <button onclick="showResult()">🎓 Show Result</button>
+  </div>
+
+  <div class="result-card animate__animated animate__zoomIn" id="resultCard" style="display:none;">
+    <img src="https://cdn-icons-png.flaticon.com/512/2616/2616949.png" alt="School Logo" class="logo">
+    <h2>The New Era School Of Sciences, Chhatri</h2>
+    <h3>📘 First Term Examination 📘</h3>
+    <div class="info">
+      <p><strong>👧 Student Name:</strong> <span contenteditable="true"></span></p>
+      <p><strong>👨‍👧 Father's Name:</strong> <span contenteditable="true"></span></p>
+      <p><strong>👩 Mother's Name:</strong> <span contenteditable="true"></span></p>
+    </div>
+    <!-- <table>
+      <tr><th>📚 Subject</th><th>✍️ Marks</th></tr>
+      <tr><td contenteditable="true">Math</td><td contenteditable="true"></td></tr>
+      <tr><td contenteditable="true">Science</td><td contenteditable="true"></td></tr>
+      <tr><td contenteditable="true">English</td><td contenteditable="true"></td></tr>
+    </table> -->
+     <table>
+  <thead>
+    <tr>
+      <th>Subject</th>
+      <th>Marks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td contenteditable="true">Math</td>
+      <td contenteditable="true"></td>
+    </tr>
+    <tr>
+      <td contenteditable="true">Science</td>
+      <td contenteditable="true"></td>
+    </tr>
+    <tr>
+      <td contenteditable="true">English</td>
+      <td contenteditable="true"></td>
+    </tr>
+     <tr>
+      <td contenteditable="true">Hindi</td>
+      <td contenteditable="true"></td>
+    </tr>
+  </tbody>
+</table>
+
+    <p><strong>Total:</strong> <span contenteditable="true">Total</span> / 300</p>
+    <p><strong>Percentage:</strong> <span contenteditable="true"></span></p>
+    <button onclick="window.print()">📄 Download / Print Result</button>
+  </div>
+
+ <script>
+  // Always show the welcome screen when the page is loaded
+  window.onload = function() {
+    document.querySelector('.start-screen').style.display = 'block';
+    document.getElementById('resultCard').style.display = 'none';
+  };
+
+  function showResult() {
+    document.querySelector('.start-screen').style.display = 'none';
+    document.getElementById('resultCard').style.display = 'block';
+  }
+</script>
+</body>
+</html>
